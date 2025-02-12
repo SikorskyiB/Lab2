@@ -14,7 +14,7 @@ public class Necklace {
     }
 
     public Necklace(List<PreciousStone> stones) {
-        this.stones = stones;
+        this.stones = new ArrayList<>(stones);
     }
 
     public void addStone(PreciousStone stone) {
