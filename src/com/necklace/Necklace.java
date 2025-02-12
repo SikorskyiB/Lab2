@@ -56,7 +56,7 @@ public class Necklace {
     public void displayValues() {
         List<String> outputString = new ArrayList<>();
         for (PreciousStone stone: stones) {
-            outputString.add(String.format("%s(%s)", stone.getName(), String.valueOf(Math.round(stone.getValue()*100)/100.0).replace(",", ".")));
+            outputString.add(String.format("%s(%s)", stone.getClass().getSimpleName(), String.valueOf(Math.round(stone.getValue()*100)/100.0).replace(",", ".")));
         }
         System.out.println(outputString);
     }

@@ -17,13 +17,8 @@ public  abstract class PreciousStone {
 
     public abstract double getValue();
 
-    public String getName(){
-        String name = this.getClass().getName();
-        return name.substring(name.lastIndexOf('.') + 1);
-    }
-
     @Override
     public String toString() {
-        return  String.format("%s(%s%% %.2f$ %.2fCD)", this.getName(), this.transparency, this.price, this.weight);
+        return  String.format("%s(%s%% %.2f$ %.2fCD)", this.getClass().getSimpleName(), this.transparency, this.price, this.weight);
     }
 }
